@@ -1,0 +1,6 @@
+label	grid_ id	Longitude_2	Latitude
+Rijck	3284	5.674	50.812
+AA	5213	11.978	48.788
+CraJur	7511	19.544	50.137
+Szent	6949	17.652	46.99
+

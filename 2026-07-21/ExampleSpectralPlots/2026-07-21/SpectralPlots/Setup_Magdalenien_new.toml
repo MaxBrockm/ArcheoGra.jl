@@ -1,0 +1,20 @@
+[file_Magda]
+filePath = "src\\DataFolder\\Magda_GridPts_clean_comma.csv"
+file_type = "csv"
+delim = ","
+material_cols_start = 4
+material_cols_end = 68
+material_age = "Magdanew"
+material_distance = 200
+grid_id = 1
+long_ind = 2
+lat_ind = 3
+source_data_path = "src\\DataFolder\\Magda_sources_to_grdpts_corr_comma.csv"
+source_data_delim = ","
+source_data_name_col = 1
+source_data_long_col = 3
+source_data_lat_col = 4
+source_data_mult = 1
+source_grid_id = 2
+maximum_distance = 50.0
+material_multiplier=1

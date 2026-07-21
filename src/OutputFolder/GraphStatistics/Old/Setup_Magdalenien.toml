@@ -1,0 +1,20 @@
+[file_Magda]
+filePath = "src\\DataFolder\\final_Magda_new.csv"
+file_type = "csv"
+delim = ","
+material_cols_start = 4
+material_cols_end = 39
+material_age = "Magdafinal"
+material_distance = 200
+grid_id = 1
+long_ind = 2
+lat_ind = 3
+source_data_path = "src\\DataFolder\\Mag_grpts_belegt_rmSOURCES_clean.txt"
+source_data_delim = "\t"
+source_data_name_col = 1
+source_data_long_col = 3
+source_data_lat_col = 4
+source_data_mult = 1
+source_grid_id = 2
+
+## Seed: Random.seed!(1)

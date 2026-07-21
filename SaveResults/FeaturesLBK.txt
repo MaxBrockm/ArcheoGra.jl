@@ -1,0 +1,32 @@
+Features of graph from time period fullLBK with materials:
+\begin{tabular}{rrrrr}
+  \hline
+   & \textbf{mean} & \textbf{median} & \textbf{Coefficient of Variation} & \textbf{skewness} \\\hline
+  degree & 8.35447 & 4.0 & 1.25732 & 1.73484 \\
+  two-hop-degree & 11.6627 & 6.0 & 0.860498 & 0.825359 \\
+  clustering coeff. & 0.337986 & 0.333333 & 0.939057 & 0.549736 \\
+  two-hop-clustering coeff. & 0.344969 & 0.333333 & 0.636403 & -0.0197679 \\
+  #outgoing edges of ego-network & 71.6888 & 16.5 & 1.5477 & 1.72808 \\
+  #neighbours of ego-network & 25.9308 & 13.0 & 1.02518 & 1.03039 \\
+  betweenness centrality & 0.0147828 & 0.00324258 & 2.34576 & 4.60855 \\
+  closeness centrality & 0.00149142 & 0.0015569 & 0.196125 & -0.72313 \\\hline
+\end{tabular}
+Normalized diameter of graph: 1.2693411343141152.\\
+Density of graph: 0.012055507732741163.\\
+
+
+Features of graph from time period fullLBK withOUT materials:
+\begin{tabular}{rrrrr}
+  \hline
+   & \textbf{mean} & \textbf{median} & \textbf{Coefficient of Variation} & \textbf{skewness} \\\hline
+  degree & 3.55331 & 3.0 & 0.598816 & 3.35591 \\
+  two-hop-degree & 4.51313 & 4.0 & 0.424899 & 1.42302 \\
+  clustering coeff. & 0.236714 & 0.166667 & 1.16143 & 1.3657 \\
+  two-hop-clustering coeff. & 0.217242 & 0.201964 & 0.692817 & 0.37342 \\
+  #outgoing edges of ego-network & 10.4986 & 8.0 & 0.829777 & 1.56252 \\
+  #neighbours of ego-network & 8.6196 & 7.0 & 0.795046 & 1.53569 \\
+  betweenness centrality & 0.0353102 & 0.0038765 & 2.58889 & 3.95441 \\
+  closeness centrality & 0.00113175 & 0.00112486 & 0.204551 & -0.237445 \\\hline
+\end{tabular}
+Normalized diameter of graph: 1.4578281852169581.\\
+Density of graph: 0.005127437404094465.\\

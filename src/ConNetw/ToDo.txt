@@ -1,0 +1,2 @@
+-- Documentation of graph comparison
+-- Make every output to current working folder or OutputPath

@@ -1,0 +1,32 @@
+Features of graph from time period Magdanew with materials:
+\begin{tabular}{rrrrr}
+  \hline
+   & \textbf{mean} & \textbf{median} & \textbf{Coefficient of Variation} & \textbf{skewness} \\\hline
+  degree & 7.22114 & 4.0 & 1.23159 & 2.61648 \\
+  two-hop-degree & 9.2487 & 5.71429 & 0.92405 & 1.84122 \\
+  clustering coeff. & 0.422502 & 0.333333 & 0.8855 & 0.344933 \\
+  two-hop-clustering coeff. & 0.41086 & 0.390909 & 0.640325 & 0.103152 \\
+  #outgoing edges of ego-network & 33.0881 & 12.0 & 1.45172 & 2.62689 \\
+  #neighbours of ego-network & 14.9589 & 10.0 & 0.93208 & 1.28318 \\
+  betweenness centrality & 0.0307773 & 0.00212643 & 3.04393 & 4.0787 \\
+  closeness centrality & 0.00120414 & 0.00116522 & 0.208903 & 0.247886 \\\hline
+\end{tabular}
+Normalized diameter of graph: 1.3763638230907285.\\
+Density of graph: 0.014159088292851387.\\
+
+
+Features of graph from time period Magdanew withOUT materials:
+\begin{tabular}{rrrrr}
+  \hline
+   & \textbf{mean} & \textbf{median} & \textbf{Coefficient of Variation} & \textbf{skewness} \\\hline
+  degree & 6.9002 & 4.0 & 1.26754 & 2.79689 \\
+  two-hop-degree & 8.97651 & 5.5 & 0.963783 & 1.88578 \\
+  clustering coeff. & 0.406786 & 0.333333 & 0.907682 & 0.43532 \\
+  two-hop-clustering coeff. & 0.392241 & 0.357143 & 0.660049 & 0.255806 \\
+  #outgoing edges of ego-network & 31.1233 & 11.0 & 1.45653 & 2.66323 \\
+  #neighbours of ego-network & 14.4814 & 9.0 & 0.947984 & 1.30417 \\
+  betweenness centrality & 0.0318723 & 0.00237297 & 2.98554 & 3.9638 \\
+  closeness centrality & 0.0012025 & 0.0011647 & 0.208531 & 0.247346 \\\hline
+\end{tabular}
+Normalized diameter of graph: 1.3784862827163227.\\
+Density of graph: 0.01352979547983577.\\

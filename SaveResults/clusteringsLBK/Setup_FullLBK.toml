@@ -1,0 +1,21 @@
+[file_fullLBK]
+filePath = "src\\DataFolder\\fullLBK_ds02preuss_GrdPts_belegtklein.txt"
+file_type = "txt"
+# sheetname = ""
+delim = ","
+material_cols_start = 6
+material_cols_end = 9
+material_age = "LBK"
+material_distance = 400
+grid_id = 1
+long_ind = 2
+lat_ind = 3
+source_data_path = "src\\DataFolder\\Sources_fullLBK.txt"
+source_data_delim = "\t"
+source_data_name_col = 1
+source_data_long_col = 3
+source_data_lat_col = 4
+source_data_mult = 1
+source_grid_id = 2
+maximum_distance = 50.0
+material_multiplier=1
