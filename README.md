@@ -13,6 +13,9 @@ The package is divided into two main submodules:
 
 ## Installation
 You can install the package using Julia's package manager. From the Julia REPL, type ] to enter the Pkg prompt and run:
+```julia
+pkg> add ArcheoGra
+```
 
 ## Citation
 We encourage you to cite our work if you have used it in your research. The latest citation information can always be found in the `CITATION.bib` file within the repository.
