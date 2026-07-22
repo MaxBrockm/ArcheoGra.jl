@@ -170,10 +170,10 @@ Recommendations:
 
 You can define material_distance in two ways:
 
-1. Single number
+Single number:
 * The same value is used for all material columns in the range `material_cols_start:material_cols_end`.
 
-2. Vector/array of numbers
+Vector/array of numbers:
 * Must match the number of material columns exactly.
 
 Example for vector form:
@@ -212,23 +212,23 @@ Examples:
 
 #### 10. Typical Pitfalls and How to Avoid Them
 
-1. Wrong delimiter
+1 Wrong delimiter
 * Symptom: columns are shifted or parsing fails.
 * Fix: verify `delim`/`source_data_delim` and match the actual file format.
 
-2. Wrong column indices
+2 Wrong column indices
 * Symptom: wrong coordinates or empty material sets.
 * Fix: test with a small file first and verify `long_ind`, `lat_ind`, and material column range.
 
-3. Mismatch in material_distance vector length
+3 Mismatch in material_distance vector length
 * Symptom: runtime conversion or indexing errors.
 * Fix: ensure vector length equals number of material columns.
 
-4. Missing source fields while `incl_sources=true`
+4 Missing source fields while `incl_sources=true`
 * Symptom: source graph creation fails.
 * Fix: add required `source_data_*` fields or run with `incl_sources=false`.
 
-5. xlsx source without `source_sheetname`
+5 xlsx source without `source_sheetname`
 * Symptom: sheet lookup fails.
 * Fix: add `source_sheetname` explicitly.
 
