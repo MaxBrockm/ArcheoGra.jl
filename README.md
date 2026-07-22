@@ -6,6 +6,8 @@ For creating archaeological networks, we use archaeological sites as the baselin
 
 The second part, concerns the calculation of Least-Cost paths on topographic data. In order to improve the runtime of the Least-Cost path analysis, topographic data is represented adaptively. LCPs are calculated via the adpative Dijkstra's Algorithm.
 
+For a **full documentation** see: https://maxbrockm.github.io/ArcheoGra.jl/dev/
+
 ## Modules and Key Features
 The package is divided into two main submodules:
 * Connect Network (ConNetw): Provides the foundational tools to construct networks from archaeological datasets, handling initial setup, global parameters, and fundamental data preparation required to model prehistoric mobility and social connectivity.
