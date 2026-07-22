@@ -41,3 +41,8 @@ makedocs(
         # "Developer API" => "Developer_API.md"
     ]
 )
+
+deploydocs(
+    repo = "github.com/MaxBrockm/ArcheoGra.jl.git",
+    devbranch = "main"
+)
