@@ -759,7 +759,7 @@ end
 
 Generates a GMT map plot for a specific generated path.
 """
-function plot_lcp_gmt(filepath::String, path_coords::Vector{Tuple{Number, Number}}, 
+function plot_lcp_gmt(filepath::String, path_coords::Vector{}, 
                       start_site::Tuple{Number, Number}, target_site::Tuple{Number, Number}, 
                       filename::String;
                       output_dir::String = pwd(),
@@ -812,7 +812,7 @@ end
 Generates a comparative GMT plot containing multiple paths defined in `path_specs`.
 """
 function plot_lcp_gmt_multi(filepath::String,
-                            path_specs::Vector{Tuple{Vector{Tuple{Number,Number}},Symbol}},
+                            path_specs::Vector{},
                             start_site::Tuple{Number, Number}, target_site::Tuple{Number, Number},
                             filename::String;
                             output_dir::String = pwd(),
@@ -955,15 +955,10 @@ function benchmark_adaptive_lcpa(filepath::String, start_site::Tuple{Float64, Fl
     for k in 1:(length(path_coords_ref)-1)
         ref_dist += distance(path_coords_ref[k], path_coords_ref[k+1])
     end
-
+    
     push!(results, ("Reference", "-", 0.0, 0.0, V_ref_comp, E_ref_comp, ref_cost, ref_dist, 0.0))
     plot_lcp_gmt(filepath, path_coords_ref, start_site, target_site, "LCP_Reference_FullGrid")
 
-    # ---------------------------------------------------------
-    # 2. Calculate Adaptive Solutions (Iterating through N and r)
-    # ---------------------------------------------------------
-
-    # 2a. Best-N-Term thresholding loop
     for N in N_values
         @info "=== Berechne Adaptive LCPA für N = $N ==="
 
@@ -1023,7 +1018,6 @@ function benchmark_adaptive_lcpa(filepath::String, start_site::Tuple{Float64, Fl
         end
     end
 
-    # 2b. Relative Error (r) thresholding loop
     for r in r_values
         @info "=== Berechne Adaptive LCPA für r = $r ==="
 
@@ -1083,9 +1077,6 @@ function benchmark_adaptive_lcpa(filepath::String, start_site::Tuple{Float64, Fl
         end
     end
 
-    # ---------------------------------------------------------
-    # 3. Print LaTeX Table Output
-    # ---------------------------------------------------------
     printstyled("\n=== Benchmark Abgeschlossen ===\n", color=:green)
     println("\n% --- LaTeX Table Output ---")
     println("\\begin{table}[htbp]")
