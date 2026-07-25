@@ -10,7 +10,7 @@ Welcome to the documentation for **ArcheoGra**, a Julia package designed to reco
 
 For the baseline of human presence, we use archaeological sites of confirmed human presence. From there, we model migration routes as edges in a spatial network, where the archaeological sites are the vertices of the network. Vertices are connected based on their distance. The framework for creating networks is discussed in (Hilpert, Brockmann, Maier, et.al., *An interdisciplinary approach to mobility network building in Archaeology*, in preparation). Different measures of distance are employed, ranging from a direct Haversine-distance to adjust for earth curvature, to a least-cost path (LCP) analysis reflecting realistic travel distances based on topographical data. We employ adaptive Wavelet methods to find LCPs using an adaptive Dijsktra's Algorithm, see [Brockmann, Perlberg, Kunoth (2026)](https://arxiv.org/abs/2607.12408) for a detailed description.
 
-I have developed the ArcheoGra.jl package in conenciton with my Ph.D thesis at the University of Cologne (Multigrid Methods for Diffusion-Advection Equations on Metric Graphs: Creating Archaeological Networks and Modelling Migration Dynamics, 2026).
+I have developed the ArcheoGra.jl package in connection with my Ph.D thesis at the University of Cologne (Multigrid Methods for Diffusion-Advection Equations on Metric Graphs: Creating Archaeological Networks and Modelling Migration Dynamics, 2026).
 
 ## Examples
 We provide a list of practical examples of how to use the key features of the package.
