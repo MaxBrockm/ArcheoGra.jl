@@ -32,6 +32,7 @@ This submodule provides tools to calculate realistic travel distances between ar
 *   **Read more:** [Least Cost Path Analysis Documentation](LCPA/LCPA_Landing.md)
 
 
+Copyright (c) 2026 Max Brockmann (University of Cologne)
 
 ## Citation
 We encourage you to cite our work if you have used it in your research. The latest citation information can always be found in the CITATION.bib file within the repository.
