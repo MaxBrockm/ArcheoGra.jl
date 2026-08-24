@@ -1080,7 +1080,7 @@ function archaeological_clusterings(toml_file::String;
     else
         mkpath(out_dir)
     end
-    out_dir = output_dir
+    # out_dir = output_dir
 
     seed !== nothing && Random.seed!(seed)
 
@@ -1253,7 +1253,6 @@ function archaeological_clusterings(toml_file::String;
         end
         
         # ── Quality Metrics Text Output ──
-        @show joinpath(out_dir, "$(time_period)_quality_metrics_tables.txt")
         open(joinpath(out_dir, "$(time_period)_quality_metrics_tables.txt"), "w") do io
             for j_mat in [1, n_stages]
                 nW, W = quality_dict[time_period][j_mat]
@@ -2188,7 +2187,7 @@ This function iteratively applies a clustering function, coarsens the graph base
 - `Vector{Vector{Int}}`: Final partitioned vertex assignments mapped back to the original graph.
 """
 function iterative_deep_clustering(W_initial::SparseMatrixCSC, cluster_func::Function; 
-                                   min_reduction::Float64=0.85, 
+                                   min_reduction::Float64=0.65, 
                                    max_iter::Int=10, k::Int=10)
     
     W_current = W_initial

@@ -176,6 +176,7 @@ function example_networks_given_data_fullLBK_magda_new(; output_dir::String=pwd(
         mkpath(out_dir)
     end
 
+    Random.seed!(58)
     full_cfg = joinpath(@__DIR__, "DataFolder", "Setup_FullLBK.toml")
     magda_cfg = joinpath(@__DIR__, "DataFolder", "Setup_Magdalenien_new.toml")
 
@@ -192,6 +193,7 @@ function example_networks_given_data_fullLBK_magda_new(; output_dir::String=pwd(
         overwrite=overwrite,
     )
 
+    Random.seed!(13)
     magda_data, magda_materials = read_data_TOML(magda_cfg)
     magda_sources = read_source_data(magda_cfg, magda_materials)
     magda_graphs = Haversine_connect_nodes_sources(

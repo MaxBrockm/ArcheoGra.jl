@@ -248,8 +248,8 @@ function read_data_TOML(config_file::String)
         if isfile(joinpath(config_dir, file_path_raw))
             file_path = joinpath(config_dir, file_path_raw)
             @info "Using file: $file_path"
-        elseif isfile(joinpath(dirname(@__DIR__), "src", "DataFolder", file_path_raw))
-            file_path = joinpath(dirname(@__DIR__), "src", "DataFolder", file_path_raw)
+        elseif isfile(joinpath(dirname(@__DIR__), "DataFolder", file_path_raw))
+            file_path = joinpath(dirname(@__DIR__), "DataFolder", file_path_raw)
             @info "Using relative file path: $file_path"
         else
             error("File not found: $file_path_raw. Please check the path in the TOML configuration.")
@@ -299,8 +299,17 @@ function read_source_data(toml_file::String, MatData::MaterialDataList)
         mult_global = get(cfg[2], "source_data_mult", nothing)
         file_type = get(cfg[2], "source_file_type", "txt")
         source_path_raw = cfg[2]["source_data_path"]
-        source_path = isabspath(source_path_raw) ? source_path_raw : normpath(joinpath(config_dir, source_path_raw))
-        
+        source_path = ""
+        if isfile(joinpath(config_dir, source_path_raw))
+            source_path = joinpath(config_dir, source_path_raw)
+            @info "Using file: $source_path"
+        elseif isfile(joinpath(dirname(@__DIR__), "DataFolder", source_path_raw))
+            source_path = joinpath(dirname(@__DIR__), "DataFolder", source_path_raw)
+            @info "Using relative file path: $source_path"
+        else
+            error("File not found: $source_path_raw. Please check the path in the TOML configuration.")
+        end
+
         local data_arr::Matrix{Any}
         if file_type == "txt"
             data_arr = DelimitedFiles.readdlm(source_path, cfg[2]["source_data_delim"][1], Any, '\n')

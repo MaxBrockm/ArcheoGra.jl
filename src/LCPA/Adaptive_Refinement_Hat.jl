@@ -881,7 +881,6 @@ function get_component_stats(Ad::SparseMatrixCSC, start_idx::Int)
 end
 
 
-### Flagged for CleanUp
 """
     benchmark_adaptive_lcpa(filepath, start_site, target_site; margin_ratio, L_ref, plot_cutout, cutout_plot_backend, wavelet_choices, r_values, N_values)
 
